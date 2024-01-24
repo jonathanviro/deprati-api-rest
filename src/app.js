@@ -1,8 +1,12 @@
 import express from 'express';
+import cors from 'cors';
 import indexRoutes from './routes/index.routes.js';
 import inventariosRoutes from './routes/inventarios.routes.js'
 
 const app = express()
+
+// Middleware para habilitar CORS
+app.use(cors());
 
 //Interpretar los json en un objeto javascript
 app.use(express.json())
